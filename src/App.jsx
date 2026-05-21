@@ -35,7 +35,7 @@ function Header() {
             <p>Student ID: {Student.studentID}</p>
             <p>Class name: {Student.class}</p>
             <p>Major: {Student.major}</p>
-            <p>Hobbies:</p>
+            <p>List of Hobbies:</p>
             <ul style={{ listStyleType: "none", paddingLeft: 0, margin: 0 }}>
               {Student.ListOfHobbies.map((hobby, index) => (
                 <li key={index}>{hobby}</li>
