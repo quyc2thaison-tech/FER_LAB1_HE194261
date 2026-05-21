@@ -31,17 +31,17 @@ function Header() {
     <div className="App">
       <h1><b>Student Profile</b></h1>
       <img src={avatar} alt="Avatar" className="avatar" />
-            <p>Name: {Student.name}</p>
+            <p>Full name: {Student.name}</p>
             <p>Student ID: {Student.studentID}</p>
-            <p>Class: {Student.class}</p>
+            <p>Class name: {Student.class}</p>
             <p>Major: {Student.major}</p>
-            <p>Status: {isOnline ? "Online" : "Offline"}</p>
             <p>Hobbies:</p>
             <ul style={{ listStyleType: "none", paddingLeft: 0, margin: 0 }}>
               {Student.ListOfHobbies.map((hobby, index) => (
                 <li key={index}>{hobby}</li>
               ))}
             </ul>
+            <p>Status: {isOnline ? "Online" : "Offline"}</p>
       
 
       <button className="primary-button" onClick={toggleOnlineStatus}>
@@ -51,7 +51,7 @@ function Header() {
       <button className="primary-button" onClick={() => setDarkMode((current) => !current)}>
         {darkMode ? "Light Mode" : "Dark Mode"}
       </button>
-      
+
       <button className="primary-button" onClick={addLike}>
         Like ({likes})
       </button>
